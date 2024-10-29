@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body>
+    <div class="table-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <table id="employee-table">
+            <thead>
+                <tr>
+                    <th>Emp Id <span class="sort-arrows">&#8593;&#8595;</span></th>
+                    <th>Name <span class="sort-arrows">&#8593;&#8595;</span></th>
+                    <th>Email <span class="sort-arrows">&#8593;&#8595;</span></th>
+                    <th>Business Unit <span class="sort-arrows">&#8593;&#8595;</span></th>
+                    <th>Languages <span class="sort-arrows">&#8593;&#8595;</span></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- dummy data will be inserted here -->
+            </tbody>
+        </table>
+        <div class="pagination-bar">
+            <button>&laquo;</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&raquo;</button>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="employee-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="employee-name"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="left-side">
+                        <select id="project-dropdown"></select>
+                        <div id="project-details"></div>
+                    </div>
+                    <div class="right-side">
+                        <div id="language-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
